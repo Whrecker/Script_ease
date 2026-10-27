@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- allow data-uris (and blob URLs if you need them) for images -->
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        img-src 'self' data: blob:;
+        connect-src 'self' http://127.0.0.1:5000;
+        media-src blob:;
+        script-src 'self';
+        style-src 'self' 'unsafe-inline';
+      ">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
